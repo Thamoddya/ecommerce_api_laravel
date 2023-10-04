@@ -75,7 +75,6 @@ class PaymentController extends \Illuminate\Routing\Controller
             'estimated_delivery_date' => Carbon::now()->addDay(5),
 
         ]);
-
         return response()->json([
             'PaymentData' => $responseData,
             'message' => "Payment Created"
