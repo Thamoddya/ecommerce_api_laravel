@@ -10,6 +10,9 @@ class PaymentMethod extends Model
 {
     use HasFactory;
 
+    protected $fillable=[
+        'name'
+    ];
 
     public function invoice():BelongsTo
     {

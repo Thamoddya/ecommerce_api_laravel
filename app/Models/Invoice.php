@@ -10,8 +10,25 @@ class Invoice extends Model
 {
     use HasFactory;
 
-    public function paymentMethod():HasMany
-    {
-        return $this->hasMany(PaymentMethod::class,'payment_methods_id');
-    }
+    public $fillable = [
+    'order_id',
+    'invoice_id',
+    'items',
+    'amount',
+    'currency',
+    'hash',
+    'first_name',
+    'last_name',
+    'email',
+    'phone',
+    'address',
+    'city',
+    'country',
+    'delivery_address',
+    'delivery_city',
+    'delivery_country',
+    'estimated_delivery_date',
+    'status',
+    ];
+
 }

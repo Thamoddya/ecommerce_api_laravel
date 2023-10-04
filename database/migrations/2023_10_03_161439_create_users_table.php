@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('password');
             $table->foreignId('roles_id')->constrained('roles');
+            $table->foreignId('cities_id')->constrained('cities');
             $table->string('image_url')->nullable();
             $table->text('verify_token')->nullable();
             $table->integer('email_verified')->default(0);
@@ -26,9 +27,6 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('users');

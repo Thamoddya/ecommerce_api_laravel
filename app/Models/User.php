@@ -27,6 +27,7 @@ class User extends Authenticatable
         'mobile',
         'address',
         'password',
+        'cities_id',
         'verify_token',
         'roles_id',
         'image_url',
@@ -47,6 +48,8 @@ class User extends Authenticatable
     public function role(){
         return $this->belongsTo(Role::class,'roles_id');
     }
-
+    public function city(){
+        return $this->belongsTo(City::class,'cities_id');
+    }
 
 }
